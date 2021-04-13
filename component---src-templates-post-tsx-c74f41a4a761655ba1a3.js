@@ -1,0 +1,2 @@
+(self.webpackChunkseitensei_github_io=self.webpackChunkseitensei_github_io||[]).push([[186],{2783:function(e,t,n){"use strict";n.r(t);var l=n(7294),a=n(5221);t.default=function(e){var t=e.data.markdownRemark,n=t.frontmatter,r=t.html;return l.createElement(a.A,null,l.createElement("div",null,l.createElement("h1",null,n.title),l.createElement("h2",null,n.date),l.createElement("div",{dangerouslySetInnerHTML:{__html:r}})))}}}]);
+//# sourceMappingURL=component---src-templates-post-tsx-c74f41a4a761655ba1a3.js.map
