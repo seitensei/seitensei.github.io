@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         title: `code`,
         description: ``,
-        author: `thanh nguyen`,
+        author: `Thanh Nguyen`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -28,8 +28,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `seitensei.github.io`,
-                short_name: `seitensei`,
+                name: `code.tnsi.me`,
+                short_name: `code`,
                 start_url: `/`,
                 background_color: `#663399`,
                 theme_color: `#663399`,
