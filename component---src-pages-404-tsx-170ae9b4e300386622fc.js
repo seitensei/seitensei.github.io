@@ -1,2 +1,0 @@
-(self.webpackChunkseitensei_github_io=self.webpackChunkseitensei_github_io||[]).push([[218],{938:function(e,t,n){"use strict";n.r(t);var u=n(7294),s=n(9804);t.default=function(){return u.createElement(s.A,null,u.createElement("h1",null,"404: Not Found"),u.createElement("p",null,"You just hit a route that doesn't exist... the sadness."))}}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-170ae9b4e300386622fc.js.map

@@ -1,2 +1,0 @@
-(self.webpackChunkseitensei_github_io=self.webpackChunkseitensei_github_io||[]).push([[473],{1922:function(e,t,n){"use strict";n.r(t);var l=n(7294),a=n(5444),i=n(5127),c=n(3751);t.default=function(){return l.createElement(i.Z,null,l.createElement(c.Z,{title:"Page two"}),l.createElement("h1",null,"Hi from the second page"),l.createElement("p",null,"Welcome to page 2"),l.createElement(a.Link,{to:"/"},"Go back to the homepage"))}}}]);
-//# sourceMappingURL=component---src-pages-page-2-tsx-fd59029924fd985eb80c.js.map
