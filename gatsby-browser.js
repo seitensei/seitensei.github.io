@@ -4,6 +4,4 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-// const React = require('react');
-import 'normalize.css/normalize.css';
-import '@fontsource/raleway';
+import '@fontsource/roboto';
