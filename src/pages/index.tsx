@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Layout } from '../components/layout';
 import { Link } from 'gatsby-theme-material-ui';
+import { Post } from '../components/post';
 
 const IndexPage = ({ data }) => {
     const { allMarkdownRemark } = data;
@@ -10,15 +11,16 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             {allMarkdownRemark.edges.map(({ node }) => (
-                <div key={node.id}>
-                    <Link to={'posts' + node.fields.slug} color="inherit">
-                        <h2>{node.frontmatter.title} </h2>
-                        <span>{node.frontmatter.date}</span>
-                    </Link>
-                    <article>
-                        <p>{node.excerpt}</p>
-                    </article>
-                </div>
+                <>
+                <Post
+                    key={node.id}
+                    title={node.frontmatter.title}
+                    datetime={node.frontmatter.date}
+                    content={node.excerpt}
+                    link={'posts' + node.fields.slug}
+                    excerpt
+                    />
+                </>
             ))}
         </Layout>
     );

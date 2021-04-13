@@ -1,18 +1,27 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/layout';
+import { Post } from '../components/post';
+
+const PostContent = ({html}) => {
+    return (
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+    );
+}
 
 const PostTemplate = ({ data }) => {
     const { markdownRemark } = data;
     const { frontmatter, html } = markdownRemark;
 
+    const postContent = PostContent({html});
+
     return (
         <Layout>
-            <div>
-                <h1>{frontmatter.title}</h1>
-                <h2>{frontmatter.date}</h2>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
-            </div>
+            <Post
+                title={frontmatter.title}
+                datetime={frontmatter.date}
+                content={postContent}
+            />
         </Layout>
     );
 };
