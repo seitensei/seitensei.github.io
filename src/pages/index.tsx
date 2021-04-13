@@ -12,13 +12,13 @@ const IndexPage = ({ data }) => {
         <Layout>
             {allMarkdownRemark.edges.map(({ node }) => (
                 <>
-                <Post
-                    key={node.id}
-                    title={node.frontmatter.title}
-                    datetime={node.frontmatter.date}
-                    content={node.excerpt}
-                    link={'posts' + node.fields.slug}
-                    excerpt
+                    <Post
+                        key={node.id}
+                        title={node.frontmatter.title}
+                        datetime={node.frontmatter.date}
+                        content={node.excerpt}
+                        link={'posts' + node.fields.slug}
+                        excerpt
                     />
                 </>
             ))}

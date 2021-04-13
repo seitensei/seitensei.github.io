@@ -5,3 +5,7 @@
  */
 
 import '@fontsource/roboto';
+
+import GlobalStateProvider from './src/components/globalStateProvider/globalStateProvider';
+
+export const wrapRootElement = GlobalStateProvider;

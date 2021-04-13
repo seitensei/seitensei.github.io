@@ -25,8 +25,7 @@ export const Footer = (props: IFooterProps) => {
         <footer className={classes.footer}>
             <Container>
                 <Grid container className={classes.footer}>
-                    <Grid item xs={12}>
-                    </Grid>
+                    <Grid item xs={12}></Grid>
                     <Grid item xs={12}>
                         {copyright || ''} &copy; {new Date().getFullYear()}
                     </Grid>

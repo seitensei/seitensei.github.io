@@ -12,11 +12,9 @@ interface IPost {
     excerpt?: boolean;
 }
 
-const ReadMoreLink = ({link}) => {
-    return (
-        <Link to={link}>{` `}Read More</Link>
-    );
-}
+const ReadMoreLink = ({ link }) => {
+    return <Link to={link}>{` `}Read More</Link>;
+};
 
 interface ITitleProps {
     link?: string;
@@ -26,33 +24,34 @@ const Title = (props: React.PropsWithChildren<ITitleProps>) => {
 
     let inner: React.ReactNode = children;
     if (link)
-        inner = <Link to={link} color="inherit">{ children }</Link>
+        inner = (
+            <Link to={link} color="inherit">
+                {children}
+            </Link>
+        );
 
     return (
         <Typography component="h4" variant="h4">
             {inner}
         </Typography>
     );
-}
+};
 
 export const Post = (props: IPost) => {
     const { title, datetime, content, link, excerpt } = props;
 
-    const readMore = ReadMoreLink({link});
+    const readMore = ReadMoreLink({ link });
 
     return (
         <Container component="article">
             <Typography component="h4" variant="h4">
-                <Title>
-                    {title}
-                </Title>
+                <Title>{title}</Title>
             </Typography>
-            <Typography>
-                {datetime}
-            </Typography>
+            <Typography>{datetime}</Typography>
             <Divider />
             <Typography component="p">
-                {content}{excerpt ? readMore : null}
+                {content}
+                {excerpt ? readMore : null}
             </Typography>
         </Container>
     );
