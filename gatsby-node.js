@@ -10,7 +10,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         createNodeField({
             node,
             name: `slug`,
-            value: slug,
+            value: `/posts${slug}`,
         });
     }
 };
@@ -33,7 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
-            path: `posts${node.fields.slug}`,
+            path: `${node.fields.slug}`,
             component: path.resolve(`./src/templates/post.tsx`),
             context: {
                 slug: node.fields.slug,

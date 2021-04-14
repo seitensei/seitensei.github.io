@@ -1,26 +1,24 @@
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import { graphql } from 'gatsby';
+import { GatsbyLink } from 'gatsby-theme-material-ui';
 import React from 'react';
 
 import { Layout } from '../components/layout';
-import { Post } from '../components/post';
 
-const IndexPage = ({ data }) => {
+const PostsPage = ({ data }) => {
     const { allMarkdownRemark } = data;
 
     return (
         <Layout>
+            <List>
             {allMarkdownRemark.edges.map(({ node }) => (
-                <>
-                    <Post
-                        key={node.id}
-                        title={node.frontmatter.title}
-                        datetime={node.frontmatter.date}
-                        content={node.excerpt}
-                        link={node.fields.slug}
-                        excerpt
-                    />
-                </>
+                <ListItem component={GatsbyLink} to={node.fields.slug}>
+                    <ListItemText primary={node.frontmatter.title} secondary={node.frontmatter.date}/>
+                </ListItem>
             ))}
+            </List>
         </Layout>
     );
 };
@@ -29,7 +27,6 @@ export const query = graphql`
     query {
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
-            limit: 5
         ) {
             totalCount
             edges {
@@ -42,11 +39,10 @@ export const query = graphql`
                     fields {
                         slug
                     }
-                    excerpt(pruneLength: 500)
                 }
             }
         }
     }
 `;
 
-export default IndexPage;
+export default PostsPage;

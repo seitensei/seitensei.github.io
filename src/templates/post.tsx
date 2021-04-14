@@ -1,19 +1,18 @@
-import React from 'react';
 import { graphql } from 'gatsby';
+import React from 'react';
+
 import { Layout } from '../components/layout';
 import { Post } from '../components/post';
 
-const PostContent = ({html}) => {
-    return (
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-    );
-}
+const PostContent = ({ html }) => {
+    return <div dangerouslySetInnerHTML={{ __html: html }} />;
+};
 
 const PostTemplate = ({ data }) => {
     const { markdownRemark } = data;
     const { frontmatter, html } = markdownRemark;
 
-    const postContent = PostContent({html});
+    const postContent = PostContent({ html });
 
     return (
         <Layout>
