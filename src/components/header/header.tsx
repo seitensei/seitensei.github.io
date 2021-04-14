@@ -1,7 +1,9 @@
 import { ListItem } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
+import FaceIcon from '@material-ui/icons/Face';
 import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -123,12 +125,32 @@ export const Header = (props: PropsWithChildren<IHeaderProps>) => {
                             <ListItem
                                 button
                                 component={GatsbyLink}
+                                to={'/projects'}
+                            >
+                                <ListItemIcon>
+                                    <AssignmentIcon />
+                                </ListItemIcon>
+                                <ListItemText primary={'Projects'} />
+                            </ListItem>
+                            <ListItem
+                                button
+                                component={GatsbyLink}
                                 to={'/posts'}
                             >
                                 <ListItemIcon>
                                     <ListAltIcon />
                                 </ListItemIcon>
                                 <ListItemText primary={'Archive'} />
+                            </ListItem>
+                            <ListItem
+                                button
+                                component={GatsbyLink}
+                                to={'/about'}
+                            >
+                                <ListItemIcon>
+                                    <FaceIcon />
+                                </ListItemIcon>
+                                <ListItemText primary={'About'} />
                             </ListItem>
                         </List>
                     </Drawer>

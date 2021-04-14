@@ -13,11 +13,14 @@ const PostsPage = ({ data }) => {
     return (
         <Layout>
             <List>
-            {allMarkdownRemark.edges.map(({ node }) => (
-                <ListItem component={GatsbyLink} to={node.fields.slug}>
-                    <ListItemText primary={node.frontmatter.title} secondary={node.frontmatter.date}/>
-                </ListItem>
-            ))}
+                {allMarkdownRemark.edges.map(({ node }) => (
+                    <ListItem component={GatsbyLink} to={node.fields.slug}>
+                        <ListItemText
+                            primary={node.frontmatter.title}
+                            secondary={node.frontmatter.date}
+                        />
+                    </ListItem>
+                ))}
             </List>
         </Layout>
     );
@@ -25,9 +28,7 @@ const PostsPage = ({ data }) => {
 
 export const query = graphql`
     query {
-        allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
-        ) {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
             totalCount
             edges {
                 node {
