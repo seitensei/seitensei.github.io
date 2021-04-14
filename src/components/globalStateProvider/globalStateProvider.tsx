@@ -15,18 +15,18 @@ const GlobalStateProvider = ({ children }) => {
 
     const toggleDrawer = () => {
         setDrawerOpen(!isDrawerOpen);
-    }
+    };
 
     return (
         <GlobalStateContext.Provider
             value={{
                 isDrawerOpen,
-                toggleDrawer
+                toggleDrawer,
             }}
-            >
-                {children}
+        >
+            {children}
         </GlobalStateContext.Provider>
     );
-}
+};
 
 export default GlobalStateProvider;

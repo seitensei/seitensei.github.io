@@ -2,7 +2,7 @@ import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'gatsby-theme-material-ui';
-import * as React from 'react';
+import React from 'react';
 
 interface IPost {
     title: string;
@@ -23,12 +23,13 @@ const Title = (props: React.PropsWithChildren<ITitleProps>) => {
     const { link, children } = props;
 
     let inner: React.ReactNode = children;
-    if (link)
+    if (link) {
         inner = (
-            <Link to={link} color="inherit">
+            <Link to={link} color="inherit" underline="none">
                 {children}
             </Link>
         );
+    }
 
     return (
         <Typography component="h4" variant="h4">
@@ -45,7 +46,7 @@ export const Post = (props: IPost) => {
     return (
         <Container component="article">
             <Typography component="h4" variant="h4">
-                <Title>{title}</Title>
+                <Title link={link}>{title}</Title>
             </Typography>
             <Typography>{datetime}</Typography>
             <Divider />
