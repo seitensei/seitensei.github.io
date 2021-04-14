@@ -18,7 +18,7 @@ const AboutPage = () => (
                 <strong>SalesPad, LLC.</strong>
                 <ul>
                     <li>
-                        <em>Software Developer, Software Developer II, September 2017 - Present</em>
+                        <span>Software Developer, Software Developer II <em>September 2017 - Present</em></span>
                         <ul>
                             <li>Contributed to the full stack development and maintenance of a cloud hosted ERP application with external accounting and fulfillment integrations and facilitated team development by mentoring new developers on frontend web development.</li>
                             <li>Engaged in a legacy modernization project, updating a server rendered Java application to an AngularJS solution. Implemented integration to Google Maps for real time tracking.</li>
@@ -26,13 +26,13 @@ const AboutPage = () => (
                         </ul>
                     </li>
                     <li>
-                        <em>Customs Developer, August 2017 - September 2017</em>
+                        <span>Customs Developer <em>August 2017 - September 2017</em></span>
                         <ul>
                             <li>Developed enhancements and customizations for a web-based B2B portal and desktop ERP application using C# and AngularJS.</li>
                         </ul>
                     </li>
                     <li>
-                        <em>Innovations Development Intern, January 2017 - August 2017</em>
+                        <span>Innovations Development Intern <em>January 2017 - August 2017</em></span>
                         <ul>
                             <li>Contributed software enhancements for a web-based B2B portal using AngularJS.</li>
                         </ul>
