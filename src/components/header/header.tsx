@@ -22,6 +22,7 @@ import { PropsWithChildren } from 'react';
 
 import { DRAWER_WIDTH } from '../../shared/contants';
 import { GlobalStateContext } from '../globalStateProvider/globalStateProvider';
+import LinkList from '../linkList/linkList';
 
 const useStyles = makeStyles(theme => ({
     hide: {
@@ -114,45 +115,7 @@ export const Header = (props: PropsWithChildren<IHeaderProps>) => {
                             </IconButton>
                         </div>
                         <Divider />
-                        {/* TODO: Move Nav List out into its own component */}
-                        <List component="nav">
-                            <ListItem button component={GatsbyLink} to={'/'}>
-                                <ListItemIcon>
-                                    <HomeIcon />
-                                </ListItemIcon>
-                                <ListItemText primary={'Home'} />
-                            </ListItem>
-                            <ListItem
-                                button
-                                component={GatsbyLink}
-                                to={'/projects'}
-                            >
-                                <ListItemIcon>
-                                    <AssignmentIcon />
-                                </ListItemIcon>
-                                <ListItemText primary={'Projects'} />
-                            </ListItem>
-                            <ListItem
-                                button
-                                component={GatsbyLink}
-                                to={'/posts'}
-                            >
-                                <ListItemIcon>
-                                    <ListAltIcon />
-                                </ListItemIcon>
-                                <ListItemText primary={'Archive'} />
-                            </ListItem>
-                            <ListItem
-                                button
-                                component={GatsbyLink}
-                                to={'/about'}
-                            >
-                                <ListItemIcon>
-                                    <FaceIcon />
-                                </ListItemIcon>
-                                <ListItemText primary={'About'} />
-                            </ListItem>
-                        </List>
+                        <LinkList />
                     </Drawer>
                 </>
             )}
