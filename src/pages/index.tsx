@@ -10,7 +10,6 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             {allMarkdownRemark.edges.map(({ node }) => (
-                <>
                     <Post
                         key={node.id}
                         title={node.frontmatter.title}
@@ -19,7 +18,6 @@ const IndexPage = ({ data }) => {
                         link={node.fields.slug}
                         excerpt
                     />
-                </>
             ))}
         </Layout>
     );

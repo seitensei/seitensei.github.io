@@ -32,9 +32,7 @@ const Title = (props: React.PropsWithChildren<ITitleProps>) => {
     }
 
     return (
-        <Typography component="h4" variant="h4">
-            {inner}
-        </Typography>
+        <>{inner}</>
     );
 };
 

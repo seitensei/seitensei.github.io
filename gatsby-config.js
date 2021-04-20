@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: `code`,
+        title: `code.tnsi`,
         description: ``,
         author: `Thanh Nguyen`,
     },
