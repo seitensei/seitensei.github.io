@@ -1,2 +1,0 @@
-(self.webpackChunkseitensei_github_io=self.webpackChunkseitensei_github_io||[]).push([[317],{3630:function(e,t,i){"use strict";i.r(t);var n=i(7294),u=i(4586);t.default=function(){return n.createElement(u.A,null)}}}]);
-//# sourceMappingURL=component---src-pages-projects-tsx-69646c21ef9634dc4671.js.map
