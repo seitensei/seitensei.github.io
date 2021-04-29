@@ -1,8 +1,16 @@
 import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'gatsby-theme-material-ui';
 import React from 'react';
+
+
+const useStyles = makeStyles(theme => ({
+    postContainer: {
+        marginBottom: theme.spacing(2)
+    }
+}));
 
 interface IPost {
     title: string;
@@ -39,10 +47,12 @@ const Title = (props: React.PropsWithChildren<ITitleProps>) => {
 export const Post = (props: IPost) => {
     const { title, datetime, content, link, excerpt } = props;
 
+    const styles = useStyles();
+
     const readMore = ReadMoreLink({ link });
 
     return (
-        <Container component="article">
+        <Container component="article" className={styles.postContainer}>
             <Typography component="h4" variant="h4">
                 <Title link={link}>{title}</Title>
             </Typography>
