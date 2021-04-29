@@ -1,5 +1,5 @@
 ---
-date: '2021-04-12'
+date: '2021-04-28'
 title: 'Setting up Electron with TypeScript'
 ---
 
