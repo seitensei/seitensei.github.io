@@ -22,7 +22,7 @@ In order to maintain code quality, I'll be using some linting and formatting too
 
 All of these are dev dependencies, so we can get away with a single command.
 
-```
+```zsh
 yarn add --dev electron typescript @types/node @babel/core \
 babel-loader @babel/plugin-proposal-class-properties \
 @babel/plugin-proposal-object-rest-spread @babel/preset-env \
@@ -211,9 +211,11 @@ app.on('window-all-closed', () => {
 
 Add the following script to run electron, `"start": "electron ./dist/main.bundle.js"`.
 
-```
+```zsh
 yarn build
 yarn start
 ```
+
+![](./typescript-electron.png)
 
 In the follow up to this post, I'll integrate [React](https://reactjs.org/) and testing.

@@ -5,16 +5,7 @@ module.exports = {
         author: `Thanh Nguyen`,
     },
     plugins: [
-        `gatsby-plugin-react-helmet`,
         `gatsby-plugin-image`,
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `images`,
-                path: `${__dirname}/src/images`,
-            },
-        },
-        `gatsby-transformer-remark`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -22,9 +13,36 @@ module.exports = {
                 path: `${__dirname}/src/content/posts`,
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/src/images`,
+            },
+        },
+        `gatsby-theme-material-ui`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 640,
+                        },
+                    },
+                    {
+                        resolve: `gatsby-remark-vscode`,
+                        options: {
+                            theme: 'Dark (Visual Studio)'
+                        },
+                    },
+                    `gatsby-remark-copy-linked-files`,
+                ],
+            },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        `gatsby-theme-material-ui`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
@@ -37,6 +55,7 @@ module.exports = {
                 icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
             },
         },
+        `gatsby-plugin-react-helmet`,
         //`gatsby-plugin-gatsby-cloud`,
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline

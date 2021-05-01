@@ -8,7 +8,7 @@ const PostContent = ({ html }) => {
     return <div dangerouslySetInnerHTML={{ __html: html }} />;
 };
 
-const PostTemplate = ({ data }) => {
+const PostTemplate = ({ data, location }) => {
     const { markdownRemark } = data;
     const { frontmatter, html } = markdownRemark;
 
@@ -26,12 +26,16 @@ const PostTemplate = ({ data }) => {
 };
 
 export const postQuery = graphql`
-    query($slug: String!) {
-        markdownRemark(fields: { slug: { eq: $slug } }) {
+    query(
+        $id: String!
+        ) {
+        markdownRemark(id: { eq: $id }) {
+            id
             html
             frontmatter {
                 date(formatString: "YYYY-MM-DD")
                 title
+                description
             }
         }
     }

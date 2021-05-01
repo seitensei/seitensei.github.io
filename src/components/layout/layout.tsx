@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { PropsWithChildren } from 'react';
+import { Helmet } from 'react-helmet';
 
 import { DRAWER_WIDTH } from '../../shared/contants';
 import { Footer } from '../footer';
@@ -55,6 +56,9 @@ export const Layout = (props: PropsWithChildren<ILayoutProps>) => {
 
     return (
         <div className={classes.root}>
+            <Helmet>
+                <title>{data.site.siteMetadata?.title || `Title`}</title>
+            </Helmet>
             <CssBaseline />
             <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
             <GlobalStateContext.Consumer>
