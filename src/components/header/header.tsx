@@ -1,22 +1,14 @@
-import { ListItem } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
-import AssignmentIcon from '@material-ui/icons/Assignment';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
-import FaceIcon from '@material-ui/icons/Face';
 import IconButton from '@material-ui/core/IconButton';
-import List from '@material-ui/core/List';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuOpenIcon from '@material-ui/icons/MenuOpen';
-import ListAltIcon from '@material-ui/icons/ListAlt';
 import clsx from 'clsx';
-import { GatsbyLink, Link } from 'gatsby-theme-material-ui';
+import { Link } from 'gatsby-theme-material-ui';
 import React from 'react';
 import { PropsWithChildren } from 'react';
 
