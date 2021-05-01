@@ -1,3 +1,4 @@
+import { Hidden } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -46,6 +47,8 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+const drawerContents = <LinkList />;
+
 interface IHeaderProps {
     siteTitle: string;
 }
@@ -88,27 +91,43 @@ export const Header = (props: PropsWithChildren<IHeaderProps>) => {
                             </Typography>
                         </Toolbar>
                     </AppBar>
-                    <Drawer
-                        variant="persistent"
-                        anchor="left"
-                        open={context.isDrawerOpen}
-                        className={classes.drawer}
-                        classes={{
-                            paper: classes.drawerPaper,
-                        }}
-                    >
-                        <div className={classes.drawerHeader}>
-                            <IconButton
-                                color="inherit"
-                                aria-label="Close Drawer"
-                                onClick={context.toggleDrawer}
-                            >
-                                <MenuOpenIcon />
-                            </IconButton>
-                        </div>
-                        <Divider />
-                        <LinkList />
-                    </Drawer>
+                    <Hidden smUp implementation="css">
+                        <Drawer
+                            variant="temporary"
+                            anchor="left"
+                            open={context.isDrawerOpen}
+                            onClose={context.toggleDrawer}
+                            className={classes.drawer}
+                            classes={{
+                                paper: classes.drawerPaper,
+                            }}
+                        >
+                            {drawerContents}
+                        </Drawer>
+                    </Hidden>
+                    <Hidden xsDown implementation="css">
+                        <Drawer
+                            variant="persistent"
+                            anchor="left"
+                            open={context.isDrawerOpen}
+                            className={classes.drawer}
+                            classes={{
+                                paper: classes.drawerPaper,
+                            }}
+                        >
+                            <div className={classes.drawerHeader}>
+                                <IconButton
+                                    color="inherit"
+                                    aria-label="Close Drawer"
+                                    onClick={context.toggleDrawer}
+                                >
+                                    <MenuOpenIcon />
+                                </IconButton>
+                            </div>
+                            <Divider />
+                            {drawerContents}
+                        </Drawer>
+                    </Hidden>
                 </>
             )}
         </GlobalStateContext.Consumer>
