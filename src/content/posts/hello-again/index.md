@@ -1,6 +1,7 @@
 ---
 date: '2021-04-12'
 title: 'Hello, Again'
+tags: ["Gatsby", "React"]
 ---
 
 It's been a while since I went back to maintaining any sort of blog or journal, but here we are again, this time with [Gatsby](https://www.gatsbyjs.com/) and [Material-UI](https://material-ui.com/). Jekyll had been my previous choice for maintaining this page, but since the last time that I intentionally used Jekyll, I've gone from being a Rubyist at heart to someone more used to the JavaScript and developing for the web.

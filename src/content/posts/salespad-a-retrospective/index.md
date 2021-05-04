@@ -1,6 +1,7 @@
 ---
 date: '2021-05-01'
 title: 'SalesPad, A Retrospective'
+tags: ["retrospective", "SalesPad", "work"]
 ---
 
 Friday, April 30th marked the end of my four years and some months at SalesPad, LLC, and my first professional development position. It's been a great four years at SalesPad, and I come out of having learned a great deal about my trade, myself, and what I want out of my career and work environment. 

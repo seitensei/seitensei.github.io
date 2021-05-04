@@ -1,6 +1,7 @@
 ---
 date: '2021-04-28'
 title: 'Setting up Electron with TypeScript'
+tags: ["JavaScript", "TypeScript", "Electron", "guide", "reference"]
 ---
 
 I don't typically explore native desktop or mobile development, since I can just host a web app on a Raspberry Pi or VPS and access the app anywhere on anything, sometimes I just need a tool that I will only be using on one computer and need to store data on the filesystem. For that purpose, I'm going to be exploring [Electon](https://www.electronjs.org/).
