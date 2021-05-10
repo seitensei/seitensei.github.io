@@ -54,7 +54,7 @@ export const Footer = (props: IFooterProps) => {
                             <Grid item xs={12}>
                                 <IconButton
                                     aria-label="GitHub"
-                                    href="https://github.com/seitensei/"
+                                    href="https://github.com/tnsicdr/"
                                     target="_blank"
                                     rel="noopener"
                                 >
