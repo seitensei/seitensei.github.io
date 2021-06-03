@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -p 34543",
+    "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
