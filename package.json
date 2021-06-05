@@ -50,7 +50,8 @@
     "react-jss": "^10.6.0"
   },
   "devDependencies": {
+    "babel-preset-gatsby": "^1.6.0",
     "gh-pages": "^3.2.0",
-    "prettier": "2.3.0"
+    "prettier": "2.3.1"
   }
 }
