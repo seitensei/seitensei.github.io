@@ -23,10 +23,14 @@ const PostsTemplate = ({
       let content;
 
       // For the excerpt, only the text content matters
-      if (Array.isArray(excerptContent))
+      if (Array.isArray(excerptContent)) {
         content = excerptContent[0];
-      else
+        if(Array.isArray(content.props.children)) {
+          content.props.children.splice(1, content.props.children.length);
+        } 
+      } else {
         content = excerptContent;
+      }
 
       return (
         <PostExcerpt key={index} slug={slug} title={title} date={date} body={content} />
