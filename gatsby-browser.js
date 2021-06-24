@@ -1,5 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+// custom typefaces
+import '@fontsource/source-sans-pro';
+import '@fontsource/source-code-pro';
+
+// normalize
+import 'normalize.css';

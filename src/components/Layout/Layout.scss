@@ -1,0 +1,57 @@
+$burundy: #80111F;
+$honeydew: #f1faee;
+$imperial-red: #e63946;
+$onyx: #393e41;
+
+$breakpoint-small: 480px; // mobile landscape
+$breakpoint-medium: 768px; // tablet portrait
+$breakpoint-large: 992px; // tablet landscape
+$breakpoint-extra-large: 1200px; // desktop/laptop
+
+body {
+  background-color: $honeydew;
+  color: $onyx;
+  font-family: "Source Code Sans", sans-serif;
+}
+
+.container {
+    margin: 0 24px;
+
+    @media screen and (min-width: $breakpoint-large) {
+      max-width: 992px;
+      margin: 0 auto;
+    }
+}
+
+.layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    main {
+        flex: 1;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+.layout-header {
+  background-color: $imperial-red;
+  color: #fff;
+  height: 48px;
+  font-size: 32px;
+  vertical-align: middle;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.layout-footer {
+    background-color: $burundy;
+    color: #fff;
+    flex-shrink: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
