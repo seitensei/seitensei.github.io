@@ -10,8 +10,8 @@ const postTemplate = ({ data: { previous, next, post } }) => {
     const content = parse(post.content);
 
     const featuredImage = {
-        url: post.featuredImage.node.localFile.publicURL,
-        altText: post.featuredImage.node.altText
+        url: post.featuredImage?.node.localFile.publicURL,
+        altText: post.featuredImage?.node.altText
     };
 
     return (
