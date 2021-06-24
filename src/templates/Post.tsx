@@ -9,9 +9,14 @@ const postTemplate = ({ data: { previous, next, post } }) => {
     const date = new Date(post.date);
     const content = parse(post.content);
 
+    const featuredImage = {
+        url: post.featuredImage.node.localFile.publicURL,
+        altText: post.featuredImage.node.altText
+    };
+
     return (
         <Layout>
-        <Post title={title} date={date} body={content} />
+        <Post featuredImage={featuredImage} title={title} date={date} body={content} />
         </Layout>
     );
 }
@@ -30,6 +35,14 @@ query PostQuery(
         content
         title
         date
+        featuredImage {
+            node {
+                localFile {
+                    publicURL
+                }
+                altText
+            }
+        }
     }
 
     previous: wpPost(id: { eq: $previousPostId }) {
