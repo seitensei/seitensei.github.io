@@ -11,7 +11,7 @@ export const Post = (props: IPostProps) => {
     return (
         <article>
             <h1>{title}</h1>
-            <h2>{date.toLocaleString()}</h2>
+            <h2>{date.toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'})}</h2>
             {featuredImage && <img src={featuredImage.url} alt={featuredImage.url} />}
             {body}
         </article>

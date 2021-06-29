@@ -13,7 +13,7 @@ export const PostExcerpt = (props: IPostExcerptProps) => {
     return (
         <article>
             <h1><Link to={slug}>{title}</Link></h1>
-            <h2>{date.toLocaleString()}</h2>
+            <h2>{date.toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'})}</h2>
             {body}
         </article>
     );
