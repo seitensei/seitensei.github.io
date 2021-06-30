@@ -25,6 +25,12 @@ export const Layout = (props: PropsWithChildren<ILayoutProps>) => {
       <div className="layout-header">
         <div className="container">
           <Link to="/">{siteTitle}</Link>
+          <nav>
+            <ul>
+              <li><Link to="/posts/">Posts</Link></li>
+              <li><Link to="/page/resources">Resources</Link></li>
+            </ul>
+          </nav>
         </div>
       </div>
       <main>

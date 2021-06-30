@@ -7,9 +7,8 @@ export const Page = (props: IPageProps) => {
     const { title, body } = props;
 
     return (
-        <article>
-            <h1>{title}</h1>
-            <p>{body}</p>
-        </article>
+        <div>
+            <div>{body}</div>
+        </div>
     );
 };

@@ -51,6 +51,33 @@ img {
     color: #fff;
     text-decoration: none;
   }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav {
+    ul {
+      // Clear Default List Style
+      list-style: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-start: 0;
+      padding-inline-start: 0;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      li {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+  }
 }
 
 .layout-footer {

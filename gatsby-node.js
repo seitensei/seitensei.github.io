@@ -1,3 +1,4 @@
+const { graphql } = require("gatsby");
 const chunk = require(`lodash/chunk`);
 const path = require(`path`);
 
@@ -7,10 +8,15 @@ exports.onPostBuild = ({ reporter }) => {
 
 exports.createPages = async (gatsbyUtilities) => {
   const posts = await getPosts(gatsbyUtilities);
+  const pages = await getPages(gatsbyUtilities);
 
   if (posts.length) {
     await createSinglePosts({ posts, gatsbyUtilities });
     await createPosts({ posts, gatsbyUtilities });
+  }
+
+  if (pages.length) {
+    await createSinglePages({ pages, gatsbyUtilities });
   }
 };
 
@@ -93,11 +99,51 @@ const getPosts = async ({ graphql, reporter }) => {
 
   if (graphqlResult.errors) {
     reporter.panicOnBuild(
-      `There was an error loading posts`,
+      `There was an error querying posts`,
       graphqlResult.errors
     );
     return;
   }
 
   return graphqlResult.data.allWpPost.edges;
+};
+
+const createSinglePages = async ({ pages, gatsbyUtilities }) => {
+  Promise.all(
+    pages.map(({ page }) => 
+      gatsbyUtilities.actions.createPage({
+        path: `/page/${page.slug}/`,
+        component: path.resolve(`./src/templates/Page.tsx`),
+        context: {
+          id: page.id
+        },
+      })
+    )
+  );
+};
+
+const getPages = async ({ graphql, reporter }) => {
+  const graphqlResult = await graphql(`
+    query GetPages {
+      allWpPage {
+        edges {
+          page: node {
+            id
+            title
+            slug
+          }
+        }
+      }
+    }
+  `);
+
+  if (graphqlResult.errors) {
+    reporter.panicOnBuild(
+      `There was an error querying pages`,
+      graphqlResult.errors
+    );
+    return;
+  }
+
+  return graphqlResult.data.allWpPage.edges;
 };
