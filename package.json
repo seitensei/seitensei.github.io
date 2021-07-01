@@ -20,6 +20,7 @@
     "@fontsource/source-sans-pro": "^4.4.5",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "babel-plugin-styled-components": "^1.13.1",
     "cross-env": "^7.0.3",
     "gatsby": "^3.8.1",
     "gatsby-plugin-image": "^1.8.0",
@@ -29,6 +30,7 @@
     "gatsby-plugin-sass": "^4.8.0",
     "gatsby-plugin-sharp": "^3.8.0",
     "gatsby-plugin-sitemap": "^4.4.0",
+    "gatsby-plugin-styled-components": "^4.8.0",
     "gatsby-source-filesystem": "^3.8.0",
     "gatsby-source-wordpress": "^5.8.0",
     "gatsby-transformer-sharp": "^3.8.0",
@@ -37,7 +39,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "sass": "^1.35.1"
+    "sass": "^1.35.1",
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
