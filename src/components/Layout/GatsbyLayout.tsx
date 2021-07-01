@@ -1,8 +1,17 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { PropsWithChildren } from 'react';
 import { Layout } from './Layout';
 
 interface IGatsbyLayoutProps {}
+
+const titleComponent = (title: string) => {
+    return <Link to="/">{title}</Link>;
+};
+
+const navList = [
+    <Link to="/posts/">Posts</Link>,
+    <Link to="/page/resources">Resources</Link>,
+];
 
 export const GatsbyLayout = (props: PropsWithChildren<IGatsbyLayoutProps>) => {
     const { children } = props;
@@ -20,5 +29,9 @@ export const GatsbyLayout = (props: PropsWithChildren<IGatsbyLayoutProps>) => {
 
     const siteTitle = data.wp.generalSettings.title;
 
-    return <Layout siteTitle={siteTitle}>{children}</Layout>;
+    return (
+        <Layout siteTitle={titleComponent(siteTitle)} navList={navList}>
+            {children}
+        </Layout>
+    );
 };

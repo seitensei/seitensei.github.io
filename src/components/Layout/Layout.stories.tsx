@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Link } from 'gatsby';
 import { Layout } from './Layout';
 
 export default {
@@ -6,9 +7,15 @@ export default {
     component: Layout,
     parameters: {
         layout: 'fullscreen',
-    }
+    },
 } as ComponentMeta<typeof Layout>;
 
+const linkList = [<a href="#">nowhere</a>, <a href="#">nowhere</a>];
+
 export const Main = () => {
-    return <Layout siteTitle="Preview">Layout Body Content</Layout>;
+    return (
+        <Layout siteTitle="Preview" navList={linkList}>
+            Layout Body Content
+        </Layout>
+    );
 };
