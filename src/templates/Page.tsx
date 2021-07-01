@@ -1,7 +1,7 @@
 import React from 'react';
 import parse from 'html-react-parser';
 import { Page } from '../components/Page/Page';
-import { Layout } from '../components/Layout/Layout';
+import { GatsbyLayout } from '../components/Layout/GatsbyLayout';
 import { graphql } from 'gatsby';
 
 const pageTemplate = ({ data: { page } }) => {
@@ -9,9 +9,9 @@ const pageTemplate = ({ data: { page } }) => {
     const content = parse(page.content);
 
     return (
-        <Layout>
+        <GatsbyLayout>
         <Page title={title} body={content} />
-        </Layout>
+        </GatsbyLayout>
     );
 }
 

@@ -1,10 +1,8 @@
-import { Layout } from "../components/Layout/Layout";
-import { Link } from 'gatsby';
+import { GatsbyLayout } from '../components/Layout/GatsbyLayout';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
 const IndexPage = () => {
-  return <Layout>
-    WIP
-  </Layout>;
+    return <GatsbyLayout>WIP</GatsbyLayout>;
 };
 
 export default IndexPage;

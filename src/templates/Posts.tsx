@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 import parse from 'html-react-parser';
-import { Layout } from "../components/Layout/Layout";
+import { GatsbyLayout } from "../components/Layout/GatsbyLayout";
 import { PostExcerpt } from "../components/PostExcerpt/PostExcerpt";
 
 const PostsTemplate = ({
@@ -13,7 +13,7 @@ const PostsTemplate = ({
   }
 
   return (
-    <Layout>
+    <GatsbyLayout>
     {posts.map((post, index) => {
       const title = String(post.title);
       const date = new Date(post.date);
@@ -36,7 +36,7 @@ const PostsTemplate = ({
         <PostExcerpt key={index} slug={slug} title={title} date={date} body={content} />
       );
     })}
-    </Layout>
+    </GatsbyLayout>
   );
 };
 

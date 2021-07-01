@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import { Layout } from '../components/Layout/Layout';
+import { GatsbyLayout } from '../components/Layout/GatsbyLayout';
 
 // styles
 const pageStyles = {
@@ -21,7 +21,7 @@ const paragraphStyles = {
 // markup
 const NotFoundPage = () => {
     return (
-        <Layout>
+        <GatsbyLayout>
             <div style={pageStyles}>
                 <title>Not found</title>
                 <h1 style={headingStyles}>Page not found</h1>
@@ -35,7 +35,7 @@ const NotFoundPage = () => {
                     <Link to="/">Go home</Link>.
                 </p>
             </div>
-        </Layout>
+        </GatsbyLayout>
     );
 };
 

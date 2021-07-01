@@ -2,23 +2,12 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import { PropsWithChildren } from "react";
 import "./Layout.scss";
 
-interface ILayoutProps {}
+interface ILayoutProps {
+  siteTitle?: string;
+}
 
 export const Layout = (props: PropsWithChildren<ILayoutProps>) => {
-  const { children } = props;
-
-  const data = useStaticQuery(graphql`
-    query SiteDataQuery {
-      wp {
-        generalSettings {
-          description
-          title
-        }
-      }
-    }
-  `);
-
-  const siteTitle = data.wp.generalSettings.title;
+  const { children, siteTitle } = props;
 
   return (
     <div className="layout-wrapper">

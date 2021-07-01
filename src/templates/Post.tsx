@@ -2,7 +2,7 @@ import { GatsbyNode, graphql } from 'gatsby';
 import React from 'react';
 import { Post } from "../components/Post/Post";
 import parse from 'html-react-parser';
-import { Layout } from '../components/Layout/Layout';
+import { GatsbyLayout } from '../components/Layout/GatsbyLayout';
 
 const postTemplate = ({ data: { previous, next, post } }) => {
     const title = String(post.title);
@@ -15,9 +15,9 @@ const postTemplate = ({ data: { previous, next, post } }) => {
     };
 
     return (
-        <Layout>
+        <GatsbyLayout>
         <Post featuredImage={featuredImage} title={title} date={date} body={content} />
-        </Layout>
+        </GatsbyLayout>
     );
 }
 
