@@ -1,6 +1,5 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { PropsWithChildren } from 'react';
-import './Layout.scss';
 
 interface ILayoutProps {
     siteTitle: JSX.Element | string;
