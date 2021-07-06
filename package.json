@@ -10,7 +10,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "cross-env NODE_ENV=production gatsby build && gh-pages -d public -b main",
+    "deploy": "cross-env NODE_ENV=production gatsby build && gh-pages -d public -b main"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.14.5",
