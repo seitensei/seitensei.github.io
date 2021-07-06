@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import styled from "styled-components";
+import styled from '@emotion/styled';
 
 const FeatureContainer = styled.div`
     background-color: rgba(0, 0, 0, 0.05);

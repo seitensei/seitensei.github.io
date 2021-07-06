@@ -13,7 +13,7 @@ module.exports = {
                 url: process.env.WPGRAPHQL_URL,
             },
         },
-        'gatsby-plugin-styled-components',
+        'gatsby-plugin-emotion',
         'gatsby-plugin-sass',
         'gatsby-plugin-image',
         'gatsby-plugin-react-helmet',
