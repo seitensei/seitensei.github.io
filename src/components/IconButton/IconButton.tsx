@@ -4,10 +4,11 @@ import { ButtonHTMLAttributes, HTMLProps } from 'react';
 import { PropsWithChildren } from 'react';
 
 interface IIconButtonsProp {
-    icon: Icon;
+    icon?: Icon;
 }
 
-const StyledButton = styled.button``;
+const StyledButton = styled.button`
+`;
 
 export const IconButton = (props: IIconButtonsProp) => {
     const { icon} = props;

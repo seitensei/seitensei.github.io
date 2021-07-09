@@ -10,7 +10,9 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "cross-env NODE_ENV=production gatsby build && gh-pages -d public -b main"
+    "deploy": "cross-env NODE_ENV=production gatsby build && gh-pages -d public -b main",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.14.5",
@@ -45,6 +47,12 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-react": "^7.14.5",
     "@emotion/babel-plugin": "^11.3.0",
+    "@storybook/addon-actions": "^6.3.2",
+    "@storybook/addon-essentials": "^6.3.2",
+    "@storybook/addon-links": "^6.3.2",
+    "@storybook/builder-webpack5": "^6.3.2",
+    "@storybook/manager-webpack5": "^6.3.2",
+    "@storybook/react": "^6.3.2",
     "babel-loader": "^8.2.2",
     "babel-preset-gatsby": "^1.8.0",
     "babel-preset-react-app": "^10.0.0",
