@@ -1,2 +1,0 @@
-(self.webpackChunktnsicdr_github_io=self.webpackChunktnsicdr_github_io||[]).push([[106],{5649:function(t,n,i){"use strict";i.r(n),i.d(n,{default:function(){return c}});i(7294);var u=i(3310),e=i(868),r=function(t){t.title;var n=t.body;return(0,e.tZ)("div",null,(0,e.tZ)("div",null,n))},l=i(2964),c=function(t){var n=t.data.page,i=String(n.title),c=(0,u.ZP)(n.content);return(0,e.tZ)(l.z,null,(0,e.tZ)(r,{title:i,body:c}))}}}]);
-//# sourceMappingURL=component---src-templates-page-tsx-fbb60ec696c19699049d.js.map
