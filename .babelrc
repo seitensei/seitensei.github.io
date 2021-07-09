@@ -9,5 +9,20 @@
                 "reactRuntime": "automatic"
             }
         ]
+    ],
+    "plugins": [
+        [
+            "prismjs",
+            {
+                "languages": ["javascript", "css", "html", "go", "csharp", "typescript", "tsx", "jsx", "swift", "ruby", "scss"],
+                "plugins": [
+                    "show-language",
+                    "line-numbers",
+                    "normalize-whitespace"
+                ],
+                "theme": "tomorrow",
+                "css": true
+            }
+        ]
     ]
 }
