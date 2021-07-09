@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import Prism from 'prismjs';
 import { useEffect } from 'react';
 import { PropsWithChildren } from 'react';
+import { burundy, linkColor } from '../../shared/colors';
 
 interface ITypographyProps {}
 
@@ -25,13 +26,20 @@ const StyledContainer = styled.div`
     }
 
     code {
-        font-family: "Source Code Pro", monospace;
+        font-family: 'Source Code Pro', monospace;
     }
 
-    :not(pre) > code[class*="language-"], pre[class*="language-"] {
+    :not(pre) > code[class*='language-'],
+    pre[class*='language-'] {
         border-radius: 8px;
     }
 
+    a,
+    a:visited,
+    a:hover {
+        color: ${linkColor};
+        text-decoration: none;
+    }
 `;
 
 /**
@@ -40,7 +48,7 @@ const StyledContainer = styled.div`
 export const Typography = (props: PropsWithChildren<ITypographyProps>) => {
     const { children } = props;
     useEffect(() => {
-        Prism.highlightAll()
+        Prism.highlightAll();
     });
 
     return <StyledContainer>{children}</StyledContainer>;

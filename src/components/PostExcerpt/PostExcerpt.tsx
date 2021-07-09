@@ -1,4 +1,5 @@
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
+import { Typography } from '../Typography/Typography';
 
 interface IPostExcerptProps {
     title: string;
@@ -11,10 +12,22 @@ export const PostExcerpt = (props: IPostExcerptProps) => {
     const { title, slug, body, date } = props;
 
     return (
-        <article>
-            <h1><Link to={slug}>{title}</Link></h1>
-            <h2>{date.toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'})}</h2>
-            {body}
-        </article>
+        <Typography>
+            <article>
+                <Link to={slug}>
+                    <h1>{title}</h1>
+                </Link>
+                <h2>
+                    {date.toLocaleString([], {
+                        year: 'numeric',
+                        month: 'numeric',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                    })}
+                </h2>
+                {body}
+            </article>
+        </Typography>
     );
 };

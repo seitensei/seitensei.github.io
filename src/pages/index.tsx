@@ -2,6 +2,19 @@ import { GatsbyLayout } from '../components/Layout/GatsbyLayout';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { Feature } from '../components/Feature/Feature';
 import parse from 'html-react-parser';
+import styled from '@emotion/styled';
+
+const IndexContainer = styled.div`
+    .feature-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        .more-posts {
+            font-size: 1.2rem;
+        }
+    }
+`;
 
 const IndexPage = ({ data }) => {
     const post = data.allWpPost.nodes[0];
@@ -21,15 +34,24 @@ const IndexPage = ({ data }) => {
     }
 
     return (
-        <GatsbyLayout>
-            <Feature>
-                <h1>Latest Post</h1>
-                <article>
-                    <h2><Link to={slug}>{post.title}</Link></h2>
-                    {content}
-                </article>
-            </Feature>
-        </GatsbyLayout>
+        <IndexContainer>
+            <GatsbyLayout>
+                <Feature>
+                    <h1>Latest Post</h1>
+                    <article>
+                        <h2>
+                            <Link to={slug}>{post.title}</Link>
+                        </h2>
+                        {content}
+                    </article>
+                    <div className="feature-actions">
+                        <Link className="more-posts" to="/posts">
+                            More Posts
+                        </Link>
+                    </div>
+                </Feature>
+            </GatsbyLayout>
+        </IndexContainer>
     );
 };
 
