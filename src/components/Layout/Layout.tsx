@@ -14,6 +14,17 @@ export const Layout = (props: PropsWithChildren<ILayoutProps>) => {
             <div className="layout-header">
                 <div className="container">
                     {siteTitle}
+                    <nav className="tablet-up">
+                        <ul>
+                            {navList?.map((navElm, idx) => {
+                                return <li key={idx}>{navElm}</li>;
+                            })}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div className="layout-nav mobile-only">
+                <div className="container">
                     <nav>
                         <ul>
                             {navList?.map((navElm, idx) => {
