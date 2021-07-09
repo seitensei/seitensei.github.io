@@ -11,6 +11,7 @@ const titleComponent = (title: string) => {
 const navList = [
     <Link to="/posts/">Posts</Link>,
     <Link to="/page/resources">Resources</Link>,
+    <Link to="/page/about">About</Link>
 ];
 
 export const GatsbyLayout = (props: PropsWithChildren<IGatsbyLayoutProps>) => {
